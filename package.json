@@ -1,0 +1,26 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "learn nodejs basic",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungnd-dev0612/NodeJs-Basic.git"
+  },
+  "author": "hungnd.dev0612",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hungnd-dev0612/NodeJs-Basic/issues"
+  },
+  "homepage": "https://github.com/hungnd-dev0612/NodeJs-Basic#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
