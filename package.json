@@ -2,9 +2,11 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "learn nodejs basic",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon index.js",
+    "start": "nodemon --inspect src/index.js",
+    "watch":"node-sass --watch src/scss/app.scss -o src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,9 +20,12 @@
   },
   "homepage": "https://github.com/hungnd-dev0612/NodeJs-Basic#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "node-sass": "^9.0.0"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
     "nodemon": "^3.1.0"
   }
 }
