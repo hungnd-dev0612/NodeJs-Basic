@@ -1,8 +1,8 @@
 import express from 'express'
-import SearchController from '../app/controllers/SearchController.js'
+import Search from '../app/controllers/search.controller.js'
 
 const route = express.Router();
 
-route.get('/',SearchController.index)
+route.get('/',Search.index)
 
 export default route;

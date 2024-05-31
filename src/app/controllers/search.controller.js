@@ -1,6 +1,6 @@
-import courseModel from "../models/CourseModels.js";
+import courseModel from "../models/course.model.js";
 
-class SearchController {
+class Search {
     async index(req, res) {
         try {
             const courses = await courseModel.find();
@@ -11,4 +11,4 @@ class SearchController {
     }
 }
 
-export default new SearchController();
+export default new Search();

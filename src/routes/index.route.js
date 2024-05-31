@@ -6,5 +6,8 @@ import searchRoute from './search.route.js'
     app.use('/news',newsRoute);
     app.use('/site',siteRoute);
     app.use('/search',searchRoute);
+
+
+    // app.use('/',);
 }
 

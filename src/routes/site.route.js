@@ -1,8 +1,8 @@
 import express from 'express';
-import SiteController from '../app/controllers/SiteController.js'
+import Site from '../app/controllers/site.controller.js'
 
 const route = express.Router();
 
-route.get('/',SiteController.index);
+route.get('/',Site.index);
 
 export default route;
