@@ -7,7 +7,8 @@
   "scripts": {
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/scss/app.scss -o src/public/css/app.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
     "node-sass": "^9.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "eslint": "^9.4.0",
+    "globals": "^15.3.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.0"
   }

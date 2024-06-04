@@ -5,6 +5,7 @@ import { routes } from '../src/routes/index.route.js'
 import { fileURLToPath } from 'url'
 import { engine } from 'express-handlebars';
 import  * as db  from "./config/db/mongodb.config.js"
+
 const port = 3000;
 const app = express()
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
@@ -19,8 +20,7 @@ app.engine('hbs', engine({
 app.set('view engine', 'hbs');
 app.set('views', path.resolve(__dirname, "views"));
 
-
 routes(app);
 db.connectMongoDb();
 
-app.listen(port)
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
