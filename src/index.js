@@ -17,7 +17,7 @@ app.engine('hbs', engine({
 }));
 
 app.set('view engine', 'hbs');
-app.set('views', path.resolve(__dirname, "./views"));
+app.set('views', path.resolve(__dirname, "views"));
 
 
 routes(app);
