@@ -23,4 +23,7 @@ app.set('views', path.resolve(__dirname, "views"));
 routes(app);
 db.connectMongoDb();
 
+
+console.log('file path: ', path.join(__dirname, 'public'));
+
 app.listen(port, () => console.log(`App listening at http://localhost:${port}`));

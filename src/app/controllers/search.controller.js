@@ -1,14 +1,14 @@
 import courseModel from "../models/course.model.js";
 
 class Search {
-  async index(req, res) {
+  async index(req, res, next) {
     try {
       const courses = await courseModel.find();
-      res.json(courses);
+      res.render('search', {courses});
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      next(error);
     }
   }
-}
 
+}
 export default new Search();
