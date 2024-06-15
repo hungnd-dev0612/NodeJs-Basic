@@ -2,7 +2,7 @@
 
 class Site {
 
-    index(req,res){
+    index(req, res) {
         res.render('site');
     }
 }

@@ -4,7 +4,7 @@ import * as path from "path";
 import { routes } from '../src/routes/index.route.js'
 import { fileURLToPath } from 'url'
 import { engine } from 'express-handlebars';
-import  * as db  from "./config/db/mongodb.config.js"
+import * as db from "./config/db/mongodb.config.js"
 
 const port = 3000;
 const app = express()
@@ -14,7 +14,12 @@ const __dirname = path.dirname(__filename);
 app.use(morgan('combined'))
 app.use(express.static(path.join(__dirname, 'public'))) //this line make main.hbs file go to the public
 app.engine('hbs', engine({
-    extname: '.hbs'
+    extname: '.hbs',
+    // helpers: {
+    //     getProp: function (obj, propName) {
+    //         return obj?.[propName];
+    //     }
+    // }
 }));
 
 app.set('view engine', 'hbs');
@@ -24,6 +29,5 @@ routes(app);
 db.connectMongoDb();
 
 
-console.log('file path: ', path.join(__dirname, 'public'));
 
 app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
