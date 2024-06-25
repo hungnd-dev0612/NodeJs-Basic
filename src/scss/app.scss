@@ -4,93 +4,139 @@ h1 {
     color: rgb(224, 18, 18);
 }
 
-.card-custom-container {
-    margin-top: 16px;
+// body {
+//     //black theme
+//     background: #1f242d;
+// }
+
+
+.card-img-top  {
+    display: block;
+    // max-width: 230px;
+    // max-height: 400px;
+    width: auto;
+    height: auto;
 }
 
-// body {
-//     background-color: #111214;
-// }
-// .a-custom {
-//     margin: 15px;
+.card {
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    // height: 550px;
+
+    //black theme
+    // background: #1f242d;
+
+}
+
+//black
+// h5 {
+//     color: white;
+
 // }
 
+// p {
+//     color: white;
+// }
+
+
+//text animation
+
+
+a:hover .card-title {
+    background-image: linear-gradient(45deg, #FBAB7E 0%, #f268f7 28%, #ffffff 100%);
+    // color: #BEE5EE;
+    display: inline-block;
+    // color: transparent;
+    // color: #007bff;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+}
+
+
+a:hover .card-text {
+    background-image: linear-gradient(45deg, #FBAB7E 0%, #f268f7 28%, #ffffff 100%);
+    display: inline-block;
+    color: #007bff;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+//container animation
 
 a:hover {
     text-decoration: none;
 }
 
-a span {
+
+
+a .hover-container span {
     display: block;
     position: absolute;
-    background: rgb(50, 50, 202);
+    background: linear-gradient(45deg, #FBAB7E 0%, #f268f7 28%, #ffffff 100%);
+    // background: linear-gradient(90deg, #BEE5EE 20%, #acc6f3 30%, #dacfe9 50%);
 }
 
 //left-line
-a span:nth-child(1) {
+a .hover-container span:nth-child(1) {
     left: 0;
     bottom: 0;
-    width: 1px;
+    width: 6px;
     height: 100%;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s;
 }
 
-a:hover span:nth-child(1) {
+a:hover .hover-container span:nth-child(1) {
     transform: scaleY(1);
 }
 
 
-// //bottom-line
-// a span:nth-child(2) {
-//     left: 0;
-//     bottom: 0;
-//     width: 100%;
-//     height: 1px;
-//     transform: scaleX(0);
-//     transform-origin: left;
-//     transition: transform 0.5s;
-// }
+//bottom-line
+a .hover-container span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
 
-// a:hover span:nth-child(2) {
-//     transform: scaleY(1);
-// }
+a:hover .hover-container span:nth-child(2) {
+    transform: scaleY(1);
+}
 
-// //right-line
-// a span:nth-child(3) {
-//     right: 0;
-//     top: 0;
-//     width: 1px;
-//     height: 100%;
-//     transform: scaleY(0);
-//     transform-origin: bottom;
-//     transition: transform 0.5s;
-// }
+//right-line
+a .hover-container span:nth-child(3) {
+    right: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
 
-// a:hover span:nth-child(3) {
-//     transform: scaleY(1);
-// }
+a:hover .hover-container span:nth-child(3) {
+    transform: scaleY(1);
+}
 
-// //top-line
-// a span:nth-child(4) {
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 1px;
-//     transform: scaleX(0);
-//     transform-origin: right;
-//     transition: transform 0.5s;
-// }
+//top-line
+a .hover-container span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
 
-// a:hover span:nth-child(4) {
-//     transform: scaleX(1);
-// }
-
-.a-custom-only {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
+a:hover .hover-container span:nth-child(4) {
+    transform: scaleX(1);
 }
