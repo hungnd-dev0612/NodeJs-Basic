@@ -7,8 +7,12 @@ h1 {
 // body {
 //     //black theme
 //     background: #1f242d;
+
 // }
 
+body{
+    overflow: auto;
+}
 
 .card-img-top  {
     display: block;
@@ -20,6 +24,7 @@ h1 {
 
 .card {
     margin-top: 16px;
+    margin-bottom: 16px;
     position: relative;
     overflow: hidden;
     padding: 10px;
@@ -140,3 +145,4 @@ a .hover-container span:nth-child(4) {
 a:hover .hover-container span:nth-child(4) {
     transform: scaleX(1);
 }
+

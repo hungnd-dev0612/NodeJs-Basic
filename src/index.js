@@ -15,12 +15,17 @@ app.use(morgan('combined'))
 app.use(express.static(path.join(__dirname, 'public'))) //this line make main.hbs file go to the public
 app.engine('hbs', engine({
     extname: '.hbs',
-    // helpers: {
-    //     getProp: function (obj, propName) {
-    //         return obj?.[propName];
-    //     }
-    // }
+    helpers: {
+        getProp: function (obj, propName) {
+            return obj?.[propName];
+        },
+        json: function (context) {
+            return JSON.stringify(context);
+        }
+    }
 }));
+
+
 
 app.set('view engine', 'hbs');
 app.set('views', path.resolve(__dirname, "views"));
